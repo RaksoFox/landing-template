@@ -1,0 +1,50 @@
+---
+import Footer from '../components/Footer.astro';
+interface Props {
+  title: string;
+  desc: string;
+}
+
+const {title, desc} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8"/>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <title>{title}</title>
+  <meta property="og:title" content=`${title}`/>
+  <meta property="og:type" content="website"/>
+  <!--<meta property="og:url" content="https://"/>-->
+  <!--<meta property="og:image" content="http://femboy.one/favicon.webp"/>-->
+  <meta property="og:description" content=`${desc}`/>
+  <meta
+      name="description"
+      content=`${desc}`
+  />
+</head>
+<body class="min-h-[100vh] flex flex-col justify-between font-sen relative text-zinc-100">
+
+<div class="bg-scroll bg-gradient-to-tr from-[#042297] via-[#031652] to-[#042297] fixed h-screen w-screen z-0"></div>
+<div class="h-full grow overflow-y-auto flex flex-col z-10">
+
+  <!-- Full width title page  -->
+  <slot name="title-page"/>
+
+  <!-- Content Start  -->
+  <div id="start"></div>
+  <slot/>
+
+</div>
+
+<Footer appName="FoxCons" contact="contact@foxcons.pl"/>
+
+<link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap" rel="stylesheet">
+
+</body>
+</html>
+

@@ -1,0 +1,28 @@
+---
+interface Props {
+  title: string;
+  data: {
+    link: string;
+    alt: string;
+    image: string;
+  }[];
+}
+
+const {title, data} = Astro.props;
+---
+
+<div class="mt-12 sm:mt-16 flex justify-center">
+  <div
+      class="mx-4 grow max-w-7xl flex flex-col flex-wrap gap-5 rounded-3xl border-2 border-accent-blue bg-gradient-to-br from-blue-600/20 to-blue-500/20 backdrop-blur-xl px-6 pt-4 pb-8">
+    <h2 class="font-bold text-4xl">{title}</h2>
+    <div class="flex flex-wrap gap-4 justify-center">
+      {data.map((item) => {
+        return <a
+            class="h-auto w-full sm:h-28 sm:w-auto rounded-md hover:scale-105 transform duration-200 shadow overflow-hidden"
+            href=`${item.link}` target="_blank">
+          <img alt=`${item.alt}` class="w-full sm:h-full" src=`${item.image}`>
+        </a>;
+      })}
+    </div>
+  </div>
+</div>

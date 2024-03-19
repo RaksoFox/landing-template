@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: hsl(205, 100%, 21%);
+}
+
+::-webkit-scrollbar-thumb {
+    background: hsl(213, 80%, 40%);
+    border-radius: 30px;
+    transition: 200ms;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: hsl(213, 82%, 50%);
+    transition: 200ms;
+}

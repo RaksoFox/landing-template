@@ -1,0 +1,82 @@
+---
+import '../styles/global.css';
+import Layout from '../layouts/Layout.astro';
+import TextBox1 from '../components/TextBox1.astro';
+import Gallery1 from '../components/Gallery1.astro';
+import TeamPage from '../components/TeamPage.astro';
+import TitlePage from '../components/TitlePage.astro';
+
+const supportedEvents = [
+  {
+    link: 'https://futrolajki.pl/',
+    alt: 'futrolajki',
+    image: '/images/partners_events/futrolajki.webp'
+  },
+  {
+    link: 'https://furpile.pl/',
+    alt: 'furpile',
+    image: '/images/partners_events/furpile.webp'
+  }
+];
+
+const partners = [
+  {
+    link: 'https://www.facebook.com/StowarzyszeniePrzyjazneKielce/',
+    alt: '"przyjazne-kielce',
+    image: '/images/partners_events/przyjaznekielce.webp'
+  },
+  {
+    link: 'https://futrolajki.pl/',
+    alt: 'futrolajki',
+    image: '/images/partners_events/futrolajki.webp'
+  },
+  {
+    link: 'https://furpile.pl/',
+    alt: 'furpile',
+    image: '/images/partners_events/furpile.webp'
+  }
+];
+---
+
+<Layout
+    title="FoxCons - Landing Page"
+    desc="Innowacyjny i nowoczesny system zarządzania konwentami i innymi wydarzeniami"
+>
+
+  <TitlePage slot="title-page"/>
+
+  <!--  <h1 class='font-bold text-5xl text-center mt-8 md:mt-16'>Słowem wstępu</h1>-->
+  <TextBox1 title="Czym jest FoxCons?">
+    <p>
+      Jest to nowoczesny, innowacyjny projekt do kompleksowego zarządzania informacjami na temat konwentów, wydarzeń i
+      imprez. Ułatwia on przeprowadzanie zapisów, zakup biletów
+      czy zarządzanie miejscami w hotelu co znacznie usprawnia organizacje różnego rodzaju wydarzeń. </p>
+    <p>
+      Dzięki nowoczesnemu podejściu pozwala on zachować informację o wielu różnorakich imprezach w jednym miejscu co
+      znacznie ułatwia wyszukiwanie i poruszanie się. Otwiera także
+      drogę do komfortowej, łatwej i szybkiej rejestracji użytkownikom chcącym brać udział w większych i mniejszych
+      eventach.
+    </p>
+    <p>
+      System jest skalowany oraz szybki, został napisany na nowoczensych platformach, a ponadto ciągle się rozwija pod
+      okiem profesjonalnych, zapalonych do pracy programistów.
+      Planowane jest wydanie go w systemie Opensource co pozwoli każdemu go modyfikować.
+    </p>
+    <p>
+      Jeżeli poszukujesz czegoś do skutecznego oraz szybkiego zarządzania wydarzeniami Foxcons jest czymś w sam raz
+      dla ciebie!
+    </p>
+  </TextBox1>
+
+  <!--  Events Section -->
+  <Gallery1 title="Aktualnie obsługiwane wydarzenia" data={supportedEvents}/>
+
+  <!-- Team 2137 zigi kiedy newsy FOR NOW STATIC -->
+  <TeamPage/>
+
+  <!--  Partners Section -->
+  <Gallery1 title="Partnerzy" data={partners}/>
+
+</Layout>
+
+<script src="../scripts/main.js"></script>
