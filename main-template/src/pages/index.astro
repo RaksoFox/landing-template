@@ -5,6 +5,7 @@ import TextBox1 from '../components/TextBox1.astro';
 import Gallery1 from '../components/Gallery1.astro';
 import TeamPage from '../components/TeamPage.astro';
 import TitlePage from '../components/TitlePage.astro';
+import Footer from '../components/Footer.astro';
 
 // TODO: Add constants here or move them to another file?
 
@@ -78,6 +79,8 @@ const partners = [
 
   <!--  Partners Section -->
   <Gallery1 title="Partnerzy" data={partners}/>
+
+  <Footer slot="footer" appName="FoxCons" contact="contact@foxcons.pl"/>
 
 </Layout>
 
