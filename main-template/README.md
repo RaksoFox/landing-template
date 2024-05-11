@@ -19,5 +19,7 @@ npm run build
 ## Why?
 ### Because YES
 
+Default template for https://foxcons.pl
+
 ---
 `(c) RaksoDev 2024`
