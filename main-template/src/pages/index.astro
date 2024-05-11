@@ -37,6 +37,11 @@ const partners = [
     link: 'https://furpile.pl/',
     alt: 'furpile',
     image: '/images/partners_events/furpile.webp'
+  },
+  {
+    link: 'https://owo.org.pl/',
+    alt: 'furpile',
+    image: '/images/partners_events/owo.webp'
   }
 ];
 ---
@@ -46,28 +51,35 @@ const partners = [
     desc="Innowacyjny i nowoczesny system zarządzania konwentami i innymi wydarzeniami"
 >
 
-  <TitlePage slot="title-page"/>
+  <TitlePage slot="title-page" desc="Innowacyjny i nowoczesny system zarządzania konwentami i innymi wydarzeniami">
+    <img slot="logo" alt="FoxCons logo" class="h-48 animate-in slide-in-from-bottom fade-in-0 duration-500" src="/favicon.svg"/>
+    <h1 slot="name"
+        class="font-bold text-6xl text-blue-900 delay-500 animate-in slide-in-from-bottom fade-in-0 duration-500 fill-mode-both">
+      FOXCONS</h1>
+  </TitlePage>
 
   <!--  <h1 class='font-bold text-5xl text-center mt-8 md:mt-16'>Słowem wstępu</h1>-->
   <TextBox1 title="Czym jest FoxCons?">
     <p>
-      Jest to nowoczesny, innowacyjny projekt do kompleksowego zarządzania informacjami na temat konwentów, wydarzeń i
-      imprez. Ułatwia on przeprowadzanie zapisów, zakup biletów
-      czy zarządzanie miejscami w hotelu co znacznie usprawnia organizacje różnego rodzaju wydarzeń. </p>
+      Jest to nowoczesny, innowacyjny system do kompleksowego zarządzania konwentami, oraz innego rodzaju wydarzeniami.
+      Ułatwia on przeprowadzanie rejestracji, sprzedaż biletów/wejściówek, generowanie identyfikatorów, prowadzenie
+      statystyk
+      czy zarządzanie miejscami w hotelu co znacznie usprawnia organizacje imprez.</p>
     <p>
-      Dzięki nowoczesnemu podejściu pozwala on zachować informację o wielu różnorakich imprezach w jednym miejscu co
-      znacznie ułatwia wyszukiwanie i poruszanie się. Otwiera także
-      drogę do komfortowej, łatwej i szybkiej rejestracji użytkownikom chcącym brać udział w większych i mniejszych
-      eventach.
+      Dzięki nowoczesnemu podejściu pozwala on szybko i docelowo nawet osobom z niewielką wiedzą techniczną, stworzyć
+      stronę własnego wydarzenia.
     </p>
     <p>
-      System jest skalowany oraz szybki, został napisany na nowoczensych platformach, a ponadto ciągle się rozwija pod
+      System jest skalowany oraz szybki przy czym wymaga minimalnych zasobów, nie wymaga on do działania bardzo
+      wydajnych serwerów co znacząco może zredukować koszty utrzymana systemu, został napisany z wykorzystaniem
+      nowoczesnych frameworków oraz technologi, a ponadto ciągle się rozwija pod
       okiem profesjonalnych, zapalonych do pracy programistów.
-      Planowane jest wydanie go w systemie Opensource co pozwoli każdemu go modyfikować.
+      Planowane jest wydanie go w systemie OpenSource co pozwoli każdemu go modyfikować i rozwijać.
     </p>
     <p>
-      Jeżeli poszukujesz czegoś do skutecznego oraz szybkiego zarządzania wydarzeniami Foxcons jest czymś w sam raz
-      dla ciebie!
+      Jeżeli poszukujesz czegoś do skutecznego oraz szybkiego do zarządzania wydarzeniami FoxCons zdecydowanie jest
+      czymś w sam raz
+      dla ciebie! Serdecznie zapraszamy do kontaktu!
     </p>
   </TextBox1>
 
@@ -80,7 +92,9 @@ const partners = [
   <!--  Partners Section -->
   <Gallery1 title="Partnerzy" data={partners}/>
 
-  <Footer slot="footer" appName="FoxCons" contact="contact@foxcons.pl"/>
+  <Footer slot="footer" appName="FoxCons" contact="contact@foxcons.pl">
+    <!--<a href="a" slot="additionalAuthors">Test</a>-->
+  </Footer>
 
 </Layout>
 

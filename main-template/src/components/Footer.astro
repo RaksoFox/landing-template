@@ -4,7 +4,7 @@ interface Props {
   contact: string;
 }
 
-const {appName, contact} = Astro.props;
+const {appName, contact } = Astro.props;
 
 ---
 
@@ -97,12 +97,7 @@ const {appName, contact} = Astro.props;
 
     <p class="text-center">Copyright © {appName} <span id="year"></span></p>
     <p class="text-center">Landing page made by <a class="text-blue-400 hover:text-blue-200 duration-200"
-                                                   href="https://github.com/RaksoFox" target="_blank">Rakso</a>, Other
-      Stuff
-      by <a
-          class="text-blue-400 hover:text-blue-200 duration-200"
-          href="/" target="_blank">XYZ</a>
-    </p>
+                                                   href="https://github.com/RaksoFox" target="_blank">Rakso</a> <slot name="additionalAuthors">
   </div>
 </footer>
 
